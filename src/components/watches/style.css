@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.watch-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.card {
+  margin-left: 50px;
+  position: relative;
+  width: 200px;
+  height: 300px;
+  background: #122936;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  height: 100%;
+  width: 100%;
+  background: #2196f3;
+  transform: skewY(345deg);
+  transition: 0.5s;
+}
+
+.card:hover::before {
+  top: -70%;
+  transform: skewY(390deg);
+}
+
+.card .img-box {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  z-index: 1;
+}
+
+.card .img-box img {
+  max-width: 100%;
+  width: 110px;
+  transition: 0.5s;
+}
+
+.card:hover .img-box img {
+  max-width: 50%;
+}
+
+.card .content-box {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.card .content-box h3 {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.content-box .price {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.content-box .add-cart {
+  position: relative;
+  top: 200px;
+  padding: 7px 15px;
+  opacity: 0;
+  margin-top: 15px;
+  color: #fff;
+  text-decoration: none;
+  background: #2196f3;
+  border-radius: 30px;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+
+.card:hover .content-box .add-cart {
+  top: 0;
+  opacity: 1;
+}
